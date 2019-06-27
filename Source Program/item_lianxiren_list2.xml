@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:id="@+id/contact_name2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="名称"
+            android:gravity="center"></TextView>
+
+        <TextView
+            android:id="@+id/contact_email2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="电子邮件"></TextView>
+
+        <TextView
+            android:id="@+id/contact_coin_addr2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="奖币地址"
+            android:gravity="center"></TextView>
+        <TextView
+            android:id="@+id/contact_flag2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="标签"
+            android:gravity="center"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

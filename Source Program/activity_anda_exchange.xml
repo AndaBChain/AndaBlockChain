@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal|center_vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:id="@+id/receive_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="8pt"
+            android:text="@string/bitcoin_receive_address"/>
+        <TextView
+            android:id="@+id/receive_address"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="8pt"
+            android:maxLines="2"
+            android:textIsSelectable="true"
+            android:text="@string/server_bitcoin_address"/>
+    </LinearLayout>
+
+    <!--比特币、以太坊的钱包地址-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:id="@+id/wallet_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textSize="8pt"
+            android:text="@string/bitcoin_wallet_address"/>
+        <EditText
+            android:id="@+id/wallet__address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <!--安达通证地址-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/anda_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/anda_wallet_address"
+            android:textSize="8pt" />
+
+        <EditText
+            android:id="@+id/anda__address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <!--比特币、以太坊的应兑换数量-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/exchange_amounts_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:text="@string/bitcoin_exchange_amounts"
+            android:textSize="8pt" />
+
+        <EditText
+            android:id="@+id/send_amount"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="请输入金额" />
+
+        <TextView
+            android:id="@+id/coin_type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="8pt"
+            android:text="BTC" />
+
+    </LinearLayout>
+
+    <!--显示安达币的兑换数量-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textSize="8pt"
+            android:text="兑换的安达通证数量(选填)"/>
+
+        <EditText
+            android:id="@+id/anda_exchange_amounts1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:hint="请输入金额" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="8pt"
+            android:text="ABT" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+        <!--显示兑换率-->
+        <TextView
+            android:id="@+id/Text_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="8pt"
+            android:text="兑换率："
+            android:layout_gravity="center_vertical"
+            />
+        <TextView
+            android:id="@+id/text_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!--显示进度条-->
+    <ProgressBar
+        android:id="@+id/proBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <!--兑换按钮-->
+    <Button
+        android:id="@+id/exchange_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="兑换"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
