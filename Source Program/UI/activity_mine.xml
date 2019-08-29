@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context="com.onets.wallet.ui.mine.MineActivity">
+    tools:context="com.onets.wallet.ui.MineActivity">
 
     <ListView
         android:id="@+id/choose_minePool"
