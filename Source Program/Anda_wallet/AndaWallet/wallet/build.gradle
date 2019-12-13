@@ -1,0 +1,173 @@
+apply plugin: 'com.android.application'
+
+android {
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+
+    defaultConfig {
+        //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId "com.onets.wallet"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 56
+        versionName "v1.0.0"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+/*    signingConfigs{
+        release{
+            def Properties localProps = new Properties()
+            localProps.load(new FileInputStream(file('../local.properties')))//读取本地配置文件
+            def Properties keyProps = new Properties()
+            //读取自定义的配置文件，keystore.props.file是自定义配置文件的绝对路径
+            assert localProps['keystore.props.file'];
+            keyProps.load(new  FileInputStream(file(localProps['keystore.props.file'])))
+            storeFile file(keyProps["storeFile"])
+            keyAlias keyProps["keyAlias"]
+            storePassword keyProps["storePssword"]
+            keyPassword keyProps["keyPassword"]
+        }
+    }
+    buildTypes {
+        release {//release版
+            minifyEnabled true//混淆打包
+            shrinkResources true//去掉不用资源
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }*/
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+        androidTest {
+            setRoot('src/test')
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('F:\\1WORKSPACE\\anda.jks')
+            storePassword '68654900'
+            keyAlias 'key'
+            keyPassword '68654900'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        //abortOnError false
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'aars'
+    }
+}
+
+ext {
+    archivesBaseName = 'Anda-wallet'
+}
+
+/*support强制使用相同版本的库*/
+configurations.all {
+
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.1.0'
+            }
+        }
+    }
+}
+
+dependencies {
+
+    implementation project(':ripplelib')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: '../core/libs')
+    implementation files('libs/AndroidSwipeLayout-v1.1.8.jar')
+    implementation files('libs/openbeans-1.0.jar')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:gridlayout-v7:29.0.0'
+    implementation 'com.android.support:support-v4:29.0.0'
+    implementation 'com.android.support:appcompat-v7:29.0.0'
+    implementation 'com.android.support:recyclerview-v7:29.0.0'
+    implementation 'com.android.support:design:29.0.0'
+    implementation 'com.google.guava:guava:25.1-android'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'com.madgag.spongycastle:core:1.58.0.0'
+    implementation 'com.google.protobuf:protobuf-java:3.5.1'
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'ch.acra:acra:4.8.5'
+    //noinspection GradleCompatible
+    implementation 'oid.com.andrsupport:support-v4-preferencefragment:1.0.0@aar'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.slf4j:slf4j-jdk14:1.7.6'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.lambdaworks:scrypt:1.4.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'org.seleniumhq.selenium:selenium-java:3.12.0'
+    implementation 'com.github.briandilley.jsonrpc4j:jsonrpc4j:1.5.3'
+    implementation 'org.web3j:core-android:2.2.1'
+    implementation 'org.apache.commons:commons-lang3:3.8'
+    //implementation 'org.web3j:core:4.1.0-android'
+    implementation 'com.android.support:multidex:1.0.3'
+    //    implementation "com.ripple:ripple-lib-java:0.0.1-SNAPSHOT"
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.6'
+    //微信支付
+    implementation 'com.braintreepayments.api:braintree:2.16.0'
+    //PalPay支付
+    implementation 'com.braintreepayments.api:drop-in:3.7.0'
+    //PalPay支付
+    implementation 'org.apache:apache:19'
+    implementation files('libs/android-async-http-1.4.9.jar')
+    //implementation 'org.bitcoinj:bitcoinj-core:0.14.7'
+    implementation files('libs/bitcoinj-core-0.12.3-openwallet.jar')
+    // implementation files('libs/bitcoinj-core-0.14.7.jar')
+    //数据库
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'android.arch.persistence:db:1.1.1'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    implementation 'com.esotericsoftware:kryo:4.0.1'
+    //支付宝
+    implementation files('libs/alipaySdk-20180601.jar')
+    //paypal
+    implementation('com.paypal.sdk:paypal-android-sdk:2.16.0') {
+        exclude group: 'io.card'//禁止通过信用卡直接支付，如果不禁止可以直接去掉这一句
+    }
+}

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.onets.wallet"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许读取电话状态SIM的权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.MODIFY_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name="com.onets.wallet.WalletApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher1"
+        android:label="Anda+Wallet"
+        android:theme="@style/AppTheme"
+        android:largeHeap="true"
+        android:supportsRtl="true" >
+        <activity
+            android:name="com.onets.wallet.ui.WalletActivity"
+            android:label="Anda+Wallet"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.onets.wallet.ui.First_activity"
+            android:label="安达链"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.ZhuceActivity"
+            android:label="注册界面"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.onets.wallet.ui.SweepWalletActivity"
+            android:label="@string/title_activity_sweep_wallet"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.onets.wallet.ui.SendActivity"
+            android:label="@string/send_coins_activity_title"
+            android:theme="@style/AppTheme">
+            <intent-filter android:label="Anda+Wallet">
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:scheme="bitcoin" />
+                <data android:scheme="litecoin" />
+                <data android:scheme="dogecoin" />
+                <data android:scheme="reddcoin" />
+                <data android:scheme="peercoin" />
+                <data android:scheme="dash" />
+                <data android:scheme="nu" />
+                <data android:scheme="namecoin" />
+                <data android:scheme="blackcoin" />
+                <data android:scheme="monacoin" />
+                <data android:scheme="feathercoin" />
+                <data android:scheme="rubycoin" />
+                <data android:scheme="digitalcoin" />
+                <data android:scheme="cannacoin" />
+                <data android:scheme="digibyte" />
+                <data android:scheme="neoscoin" />
+                <data android:scheme="vertcoin" />
+                <data android:scheme="jumbucks" />
+                <data android:scheme="vpncoin" />
+                <data android:scheme="novacoin" />
+                <data android:scheme="shadowcash" />
+                <data android:scheme="canadaecoin" />
+                <data android:scheme="parkbyte" />
+                <data android:scheme="verge" />
+                <data android:scheme="clams" />
+                <data android:scheme="gcr" />
+                <data android:scheme="potcoin" />
+                <data android:scheme="gulden" />
+                <data android:scheme="auroracoin" />
+                <data android:scheme="bata" />
+                <data android:scheme="okcash" />
+                <data android:scheme="asiacoin" />
+                <data android:scheme="egulden" />
+                <data android:scheme="clubcoin" />
+                <data android:scheme="richcoin" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.IntroActivity"
+            android:theme="@style/AppThemeNoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.onets.wallet.ui.PasswordConfirmationActivity"
+            android:theme="@style/AppThemeNoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.onets.wallet.ui.SignTransactionActivity"
+            android:theme="@style/AppThemeNoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.onets.wallet.ui.ScanActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/AppThemeNoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.onets.wallet.ui.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.AddCoinsActivity"
+            android:label="@string/title_activity_add_coins"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.TransactionDetailsActivity"
+            android:label="@string/title_activity_transaction_details"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.onets.wallet.ui.ExchangeRatesActivity"
+            android:label="@string/title_activity_exchange_rates"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.PreviousAddressesActivity"
+            android:label="@string/title_activity_previous_addresses"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.onets.wallet.ui.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.ShowSeedActivity"
+            android:label="@string/title_activity_show_seed"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.TradeActivity"
+            android:label="@string/title_activity_trade"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.WalletActivity" />
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.ExchangeHistoryActivity"
+            android:label="@string/title_activity_exchange_history"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.TradeActivity" />
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.TradeStatusActivity"
+            android:label="@string/title_activity_exchange_status"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.onets.wallet.ui.SignVerifyMessageActivity"
+            android:label="@string/title_activity_sign_verify_message"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.onets.wallet.ui.AccountDetailsActivity"
+            android:label="@string/title_activity_account_details"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.onets.wallet.ui.SweepWalletActivity"
+            android:label="@string/title_activity_sweep_wallet"
+            android:theme="@style/AppTheme"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.onets.wallet.ui.FeesSettingsActivity"
+            android:label="@string/title_activity_transaction_fees"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="com.onets.wallet.ui.DebuggingActivity"
+            android:label="@string/title_activity_debugging"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.onets.wallet.ui.SettingsActivity" />
+        </activity>
+
+        <provider
+            android:name="com.onets.wallet.ExchangeRatesProvider"
+            android:authorities="com.onets.wallet.exchange_rates"
+            android:exported="false" />
+        <provider
+            android:name="com.onets.wallet.AddressBookProvider"
+            android:authorities="com.onets.wallet.address_book"
+            android:exported="false" />
+        <provider
+            android:name="com.onets.wallet.ExchangeHistoryProvider"
+            android:authorities="com.onets.wallet.exchange_history"
+            android:exported="false" />
+
+        <service
+            android:name="com.onets.wallet.service.CoinServiceImpl"
+            android:exported="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name="com.onets.wallet.ui.MineActivity" />
+        <activity android:name="com.onets.wallet.ui.SelectCoinActivity" />
+        <activity android:name="com.onets.wallet.ui.AndaWalletFunctionActivity" />
+        <activity android:name="com.onets.wallet.ui.Select_AddCoinActivity" />
+        <activity android:name="com.onets.wallet.ui.AndaServiceActivity" />
+        <activity android:name="com.onets.wallet.ui.LegalPayActivity" />
+        <activity android:name="com.onets.wallet.ui.ZhifuQr" />
+        <activity android:name="com.onets.wallet.ui.Exchange" />
+        <activity
+            android:name="com.onets.wallet.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.onets.wallet.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+
+        <!-- ACRA caught a RuntimeException for com.onets.wallet -->
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.onets.wallet.ui.AndaExchange"/>
+        <activity android:name="com.onets.wallet.PayPalAPI.PayPalActivity"/>
+    </application>
+
+</manifest>

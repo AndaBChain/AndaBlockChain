@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/action_scan_qr_code"
+        android:title="@string/action_scan_qr_code"
+        android:icon="@drawable/qr_code_menu"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_create_account"
+        android:title="新建账号"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_export_account"
+        android:title="导入账号"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_import_account"
+        android:title="导出账号"
+        app:showAsAction="never" />
+
+</menu>

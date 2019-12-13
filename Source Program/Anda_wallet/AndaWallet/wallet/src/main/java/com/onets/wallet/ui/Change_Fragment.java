@@ -1,0 +1,204 @@
+package com.onets.wallet.ui;
+
+import android.content.Context;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.onets.wallet.R;
+
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ * Use the {@link Change_Fragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class Change_Fragment extends Fragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+    EditText et_1;
+    EditText et_2;
+    TextView tv_rate;
+    Double rate=2.0;
+
+    private OnFragmentInteractionListener mListener;
+    WebView webView;
+
+    public Change_Fragment() {
+        // Required empty public constructor
+    }
+
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment Change_Fragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    public static Change_Fragment newInstance(String param1, String param2) {
+        Change_Fragment fragment = new Change_Fragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+            Connection con = Jsoup.connect("https://www.huobi.pro/zh-cn/market/?base=eth&quote=btc");
+            try {
+                Document document = con.get();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_change_,container,false);
+        et_1= (EditText) view.findViewById(R.id.et_1);
+        et_2= (EditText) view.findViewById(R.id.et_2);
+        tv_rate= (TextView) view.findViewById(R.id.rate);
+        tv_rate.setText(rate.toString());
+
+        // Inflate the layout for this fragment
+
+        et_1.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        et_2.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        et_1.setText("0");
+        et_2.setText("0");
+
+        et_1.addTextChangedListener(watcher);
+        webView= (WebView) view.findViewById(R.id.webview);
+        webView.loadUrl("http://baidu.com");
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                // TODO Auto-generated method stub
+                //返回值是true的时候控制去WebView打开，为false调用系统浏览器或第三方浏览器
+                view.loadUrl(url);
+                return true;
+            }
+        });
+
+//        Double a1=0.0;
+//        Double a2=0.0;
+//        String str1 = et_1.getText().toString();
+//        String str2 = et_2.getText().toString();
+//        if(str1==""){
+//            str1="0";
+//        }else{
+//            a1=Double.valueOf(str1);
+//        }
+//        a2=a1*rate;
+//        et_2.setText(a2.toString());
+        return inflater.inflate(R.layout.fragment_change_, container, false);
+    }
+
+    private TextWatcher watcher = new TextWatcher() {
+        private CharSequence temp;
+        private int editStart;
+        private int editEnd;
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            // TODO Auto-generated method stub
+                  temp=s;
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            String str1=""+s;
+            Double a1=Double.valueOf(str1);
+            Double a2=a1*rate;
+            et_2.setText(a2.toString());
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+          String ss=""+s;
+          Double a=Double.valueOf(ss);
+          Double b=a*rate;
+          String string2 = b.toString();
+          et_1.setText(s);
+          et_2.setText(string2);
+
+        }
+    };
+
+
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+//        if (context instanceof OnFragmentInteractionListener) {
+//            mListener = (OnFragmentInteractionListener) context;
+//        } else {
+//            throw new RuntimeException(context.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
+    }
+}

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--双击返回键退出程序-->
+    <string name="exit_again">Press rursus quispiam egredi progressio</string>
+
+    <!--功能模块-->
+    <string name="title_mining">Mining</string>
+
+    <string name="action_scan_qr_code">Scan</string>
+    <string name="action_share">Share</string>
+    <string name="action_copy">Exemplum</string>
+    <string name="action_edit_label">Recensere Pittacium</string>
+    <string name="action_empty_wallet">Pecunia uti omnes</string>
+    <string name="action_sweep_wallet">Eripiant partas vidulum</string>
+    <string name="action_settings">Optiones</string>
+    <string name="action_support">Contact firmamentum</string>
+    <string name="action_about">Circa</string>
+    <string name="action_refresh">Renovare</string>
+    <string name="action_sign_verify_message">Sign/quin nuntius</string>
+    <string name="action_account_details">Ratio details</string>
+    <string name="action_exchange_history">Exchange historia</string>
+    <string name="action_new_address">Novum inscriptio</string>
+    <string name="action_swap_coins">PERMUTO denarios</string>
+    <string name="action_delete">delere</string>
+    <string name="action_change_address_type">Mutare oratio genus</string>
+    <!-- Errors -->
+    <string name="error_generic">Error occurrit in faciendo opus</string>
+    <string name="error_could_not_read_wallet">Numquid non legit pera</string>
+    <string name="error_camera">Numquid non access the camera fabrica</string>
+    <!-- Generic items -->
+    <string name="button_ok">Bene</string>
+    <string name="button_next">deinde</string>
+    <string name="button_finish">consummavi</string>
+    <string name="button_return">Redi</string>
+    <string name="button_confirm">Constituo</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_default">Default</string>
+    <string name="button_dismiss">Mitte</string>
+    <string name="button_delete">delere</string>
+    <string name="button_add">addere</string>
+    <string name="button_save">salvare</string>
+    <string name="button_remove">Remove</string>
+    <string name="button_edit">recensere</string>
+    <string name="button_send">Mitte</string>
+    <string name="button_sign">Sign</string>
+    <string name="button_verify">quin</string>
+    <string name="button_skip">Skip</string>
+    <string name="button_retry">Retry</string>
+    <string name="button_download">Download</string>
+    <string name="button_agree">conveniunt</string>
+    <string name="button_disagree">dissentio</string>
+    <string name="button_add_coins">+ denarios</string>
+    <string name="button_execute">Judicium</string>
+    <string name="yes">Ita</string>
+    <string name="no">nullum</string>
+    <string name="scan_qr_code">QR code scan</string>
+    <string name="erase_address">delens inscriptio</string>
+    <string name="copied_to_clipboard">Copied ut clipboard</string>
+    <string name="wallet_title_request">oratio</string>
+    <string name="wallet_title_balance">statera</string>
+    <string name="wallet_title_send">mitte</string>
+    <string name="wallet_locked_message">Vidulus tuus est clausa</string>
+    <string name="wallet_is_not_locked_message">Non est clausum vestri pera</string>
+    <string name="unlock_wallet_title">Reserare vidulum</string>
+    <!-- &#8230; is the ... character -->
+    <string name="unlocking_wallet_working">Unlocking vidulum&#8230;</string>
+    <string name="unlocking_wallet_error_title">Non pera tibi reserare</string>
+    <string name="unlocking_wallet_error_detail">Tu es usura rectam password? Quaeso, scrutare si esset ingressus es tesserae recte. Si hoc sententia usura vestri pera sua convaluisset conatus restituere errore perseverare.</string>
+    <string name="powered_by">nectunt</string>
+    <string name="coin_libra">Libra\nLibra\nLibra</string>
+    <string name="coin_cbdc">CBDC\n央行数字货币\nCBDC</string>
+    <!-- Nav drawer -->
+    <string name="navigation_drawer_open">Navigation apert drawer</string>
+    <string name="navigation_drawer_close">Navigation prope drawer</string>
+    <string name="navigation_drawer_services">Services</string>
+    <string name="navigation_drawer_wallet">vidulum</string>
+    <string name="navigation_drawer_home">Domum</string>
+    <!-- SendOutput widget -->
+    <string name="fee">feodo transaction</string>
+    <string name="send">Mitte</string>
+    <string name="trade">Exchange</string>
+    <string name="receive">accipite</string>
+    <!-- Welcome fragment -->
+    <string name="welcome_text">Gratam Anda+ Wallet</string>
+    <string name="create_wallet">Novam pera</string>
+    <string name="restore_wallet">Vidulum restituet</string>
+    <string name="test_wallet">Test pera</string>
+    <!-- Intro -->
+    <string name="override_wallet_warning_title">Nolens oboedire existentium vidulum?</string>
+    <string name="override_new_wallet_warning_message">Si vos partum a novus pera, et perdidit nisi abs te existentium vestri tergum sursum vestri <i> sententia convaluisset</i>.</string>
+    <string name="override_restore_wallet_warning_message">Si vidulum restituere, nisi amissa vestri existentium abs te ut tergum sursum vestri <i> sententia convaluisset</i>.</string>
+    <string name="incompatible_device_warning_title">simul fabrica</string>
+    <string name="incompatible_device_warning_message">Id praestare non possum cryptographic munera aliqua ex hardware et software bugs et limitations. \ Nin quibusdam casibus, quod solvitur ut ad an update ut fabrica fabrica e.\n\nFeel ut pervenio sicco liberum, si vos have ullus questions: https://reddit.com/r/openwallet</string>
+
+    <!-- Recovery fragment -->
+    <string name="seed_info">Hoc est <i> recuperatio sententia </i>, quae sunt claves ad generate in peram suam. Quaeso scribere super charta et repones intra ianuas et fragmen secure est. Quicumque accessum ad <i> recuperatio sententia </i> est totalis accessum in peram pecunia sua, et omnes. \nsi tua te perdere <i> recuperatio sententia </i>, possit repeti non peram.</string>
+    <string name="seed_title">Recuperatio sententia tua</string>
+    <string name="seed_regenerate_title">Tange et generate recuperatio a sententia</string>
+    <string name="backed_up_seed">Ego absconditum sententia mea recuperatio</string>
+    <!-- Restore fragment -->
+    <string name="restore_info">PDF vestra salute sententiam:</string>
+    <string name="restore_seed_protected">Uti BIP39 passphrase</string>
+    <string name="restore_skip_title">transiliens verificationem</string>
+    <string name="restore_skip_info1">Quaeso, scrutare si vestra recuperatio haec sententia aequet:</string>
+    <string name="restore_skip_info2">Ut tecum commendatus probationem vestra salute sententiam valeant.</string>
+    <string name="restore_error_checksum">Recuperatio quod dicit non sit verum. Errata reprehendo commodo spelling.</string>
+    <string name="restore_error_words">Verborum sententia recuperatio habet latuit.</string>
+    <string name="restore_error_mismatch">Ingressus est recuperatio sententia congruit stored sententia convaluisset.</string>
+    <string name="restore_error">Non quin vestra recuperatio sententia. %1$s</string>
+    <string name="extra_entropy">Extra entropy</string>
+    <!-- Wallet activity -->
+    <string name="test_wallet_message">Hic est temptare peram, in quo possis mittere et accipere testnet Bitcoins, et Litecoin Dogecoins.\n\nvidulum cum ipsa pecunia uti si vis ad placere: <b> Occasus > Restituere pera> Novam pera</b>.</string>
+    <string name="wallet_update_title">Nova version available</string>
+    <string name="wallet_update_message">Novum version of OpenWallet is available, et suus bugs quod continet omnia, novus features!</string>
+    <string name="pay_with">et mitte</string>
+    <string name="exchange_and_pay_title">Vice mittam</string>
+    <!-- PayToDialog-->
+    <!-- Ambiguous address means that the wallet cannot deduce the correct address coin type -->
+    <string name="ambiguous_address_title">ambigua oratio</string>
+    <string name="ambiguous_address_message">Placere eligere rectam numisma type</string>
+    <!-- Balance fragment -->
+    <string name="wallet_transactions_coinbase">Mined</string>
+    <string name="history_empty">Non ita multo nummos accepit?\n\nte potest aliquam esse per commutatio, et in negotiatione vendere servicia seu bona.</string>
+    <string name="ripple_history_empty">Unfunded ob!\n\ntu currently non habent ullam sese unda reductos (XRP) Ut vos can adepto coepi.</string>
+    <string name="sent_to">misit ad</string>
+    <string name="received_with">et accepit</string>
+    <string name="received_from">accepi a</string>
+    <string name="get_tx_info_error">Non impetro informationem transaction</string>
+    <string name="disconnected_label">No connection</string>
+    <string name="no_wallet_pocket_selected">Non peram propter electus</string>
+    <string name="get_tx_broadcast_error">Transaction errorem iaci</string>
+    <!-- Receive fragment -->
+    <string name="receive_address_label">Sermo</string>
+    <string name="create_new_address">Partum a novus oratio?</string>
+    <string name="create_new_address_name">Name (optional)</string>
+    <string name="view_previous_addresses">prior oratio</string>
+    <string name="too_many_unused_addresses">Nimis insolens oratio velint uti ante partum novus oratio prioris.</string>
+    <!-- Send Activity -->
+    <string name="send_coins_activity_title">mitte denarios</string>
+    <!-- Send fragment -->
+    <string name="send_coins_fragment_receiving_address_label">redde ei</string>
+    <string name="send_coins_fragment_receiving_address_tip">nomen et inscriptio</string>
+    <string name="send_coins_fragment_receiving_address_error">Aliquam BitCoin Oratio!</string>
+    <string name="send_coins_fragment_amount_label">Tantum reddere</string>
+    <string name="send_coins_fragment_button_send">Mitte</string>
+    <string name="send_coins_fragment_button_back">Back</string>
+    <string name="send_coins_failed_msg">Deficio!</string>
+    <string name="send_coins_error_network">Non coniungere ad network Roman Coin</string>
+    <string name="send_coins_error_dust">Et reprobari a missione minor copia elit</string>
+    <!-- Here the %1$s is a detailed error message -->
+    <string name="send_coins_error">Nummos non dimittam: %1$s</string>
+    <string name="pay_to_label">redde ei</string>
+    <string name="amount_to_send_label">tantum</string>
+    <string name="scan_error">Difficultas intuens: %1$s</string>
+    <!-- Here the \"%1$s\" is the "coin name"-->
+    <string name="unsupported_coin">Nummum \"%1$s\" non praebetur.</string>
+    <string name="address_error">Et provisum est inscriptio electronica valida.</string>
+    <string name="amount_error">Et provisum non tantum valet</string>
+    <string name="amount_error_empty">Please enter an amount</string>
+    <string name="amount_error_negative">Mittere non tantum privative</string>
+    <!-- %1$s is the amount e.g. ... is at least 0.00001 BTC-->
+    <string name="amount_error_too_small">Quod minimum quidem moles sit %1$s</string>
+    <string name="amount_error_not_enough_money_plain">satis pecunia</string>
+    <!-- %1$s is the wallet balance e.g. ... current balance is 3.1415 BTC-->
+    <string name="amount_error_not_enough_money">Satis pecunia, current statera %1$s</string>
+    <string name="amount_warn_fees_apply">Paulo minus propter sumptus et misit fees</string>
+    <!-- Set Password fragment -->
+    <string name="set_password_info">Set a password ut vestri pera in praesidio quotidie usu.</string>
+    <string name="password_stytle">Forma Password:\n1.Saltem X Password\n2.Casus litterarum saltem ex duobus numeris</string>
+    <string name="set_bip39_passphrase">Typus tuum BIP39 passphrase</string>
+    <string name="set_password1">Typus vestri password</string>
+    <string name="set_password2">Re-typus vestri password</string>
+    <!-- Here the \"%1$s\" is the "password"-->
+    <string name="password_too_common_error">Password \"%1$s\" communis est usus ut faciam confidenter.</string>
+    <!-- The %1$d is a number of characters, usually 10 characters -->
+    <string name="password_too_short_error">Password est brevior, minimam characteres %1$d .</string>
+    <string name="password_too_single_error">Quod si duo numeri litteris certe complectens.</string>
+    <string name="passwords_mismatch">Passwords non aequare</string>
+    <string name="password_error">Non procedet ignoro errorem deprehendimus.</string>
+    <string name="password_skip_warn">Et alios aditus tesseram obstinato non peram.</string>
+    <string name="password_wallet_recovery">Ut restituo vestri peram velit praebere solebat creare idem BIP39 passphrase peram una cum sententia convaluisset.\nintrabit si recuperatio alia sententia est, nova voluntas creata perula discurret fundatur in illa sententia.</string>
+    <!-- FinalizeWalletRestorationFragment -->
+    <string name="wallet_restoration">Placet exspectare dum restituitur vidulum</string>
+    <string name="wallet_restoration_master_key">Partum key dominum</string>
+    <!-- The %1$s is a coin name e.g. Creating key for Bitcoin -->
+    <string name="wallet_restoration_coin">Ad partum key %1$s</string>
+    <!-- The %1$s is an error message -->
+    <string name="wallet_restoration_error">Non peram, non restituet.\n\n%1$s</string>
+    <!-- PasswordConfirmationFragment -->
+    <string name="enter_password">Intra vestri password</string>
+    <!-- SignTransactionFragment -->
+    <!-- &#8230; is the ... character -->
+    <string name="contacting_exchange">Contacting commutationem&#8230;</string>
+    <string name="preparing_transaction">Libet expectare dum acta et praeparatur.</string>
+    <string name="no_such_pocket_error">Error occurrit obvius vestri peram. Si quaestio obdurat, tentant usura restoring vestri pera sua sententia convaluisset.</string>
+    <string name="password_failed">Tesseras ingressus est verum.</string>
+    <!-- &#8230; is the ... character -->
+    <string name="sending_msg">mittens&#8230;</string>
+    <string name="sent_msg">Misit? Libet expectare rem sacramenti.</string>
+    <string name="tx_already_broadcast">Iam pecuniam misit</string>
+    <string name="trade_expired">Exchange exspiravit</string>
+    <!-- %1$s is the time remaining e.g. ... in the next 8 minutes 35 seconds-->
+    <string name="tx_confirm_timer_message">Res deinde etiam velit %1$s</string>
+    <plurals name="tx_confirm_timer_minute">
+        <item quantity="one">%s minute</item>
+        <item quantity="other">%s minutes</item>
+    </plurals>
+    <plurals name="tx_confirm_timer_second">
+        <item quantity="one">%d secundus</item>
+        <item quantity="other">%d seconds</item>
+    </plurals>
+
+
+    <!-- Add Coins -->
+    <string name="title_activity_add_coins">addere denarios</string>
+    <!-- %1$s is the coin name e.g. ... create a Bitcoin account ... -->
+    <string name="password_add_coin">%1$s propter vos ut creare vestri in peram suam.</string>
+    <!-- %1$s is the coin name e.g. Add Bitcoin? -->
+    <string name="adding_coin_confirmation_title">addere %1$s?</string>
+    <!-- %1$s is the coin name e.g. ... a new Bitcoin account -->
+    <string name="adding_coin_working">Placet exspectare dum propter creationem novi %1$s</string>
+    <!-- %1$s is the coin name and %2$s is and error message e.g. Error adding Bitcoin: some error message -->
+    <string name="add_coin_error">Error addendo %1$s: %2$s</string>
+
+
+
+    <!--todo: 翻译成拉丁文-->
+    <!-- %1$s is the coin name e.g. Bitcoin already added -->
+    <string name="coin_already_added_title">%1$s already added</string>
+    <string name="coin_already_added">Additional accounts are not yet supported</string>
+    <!-- Transaction amount visualizer -->
+    <!-- Internal transfer means that the wallet send money to itself.-->
+    <string name="internal_transfer">Internal transfer</string>
+    <!-- Transaction Details -->
+    <string name="title_activity_transaction_details">Transaction details</string>
+    <string name="sent">Sent</string>
+    <string name="received">Received</string>
+    <!-- Status of a transaction, could be pending for confirmations or confirmed -->
+    <string name="status_label">Status</string>
+    <string name="date_label">Date</string>
+    <string name="transaction_id_label">Transaction id</string>
+    <string name="view_at_a_blockchain_explorer_link">View on blockchain explorer</string>
+    <!-- %d is the number of confirmations -->
+    <plurals name="status_building">
+        <item quantity="one">%d confirmation</item>
+        <item quantity="other">%d confirmations</item>
+    </plurals>
+    <string name="status_pending">Waiting for transaction confirmation</string>
+    <string name="status_unknown">Transaction status unknown</string>
+    <!-- Exchange Rates -->
+    <string name="title_activity_exchange_rates">Exchange rates</string>
+    <!-- %1$s is the symbol of a fiat currency e.g. Set EUR as a ... -->
+    <string name="set_local_currency">Set %1$s as a local currency</string>
+    <string name="exchange_rates_loading">Loading exchange rates</string>
+    <string name="exchange_rates_load_error">Could not load exchange rates</string>
+    <string name="exchange_rates_empty_search">Could not find exchange rate</string>
+    <!-- Select Coins -->
+    <string name="select_coins">Select the coins you wish to use with your wallet. You can add more later.</string>
+    <!-- Previous Addresses -->
+    <string name="title_activity_previous_addresses">My previous addresses</string>
+    <string name="previous_addresses_used">Used address</string>
+    <string name="previous_addresses_unused">Unused address</string>
+    <!-- Edit Address Book Entry -->
+    <string name="edit_address_book_entry_dialog_title_add">Add address</string>
+    <string name="edit_address_book_entry_dialog_title_edit">Edit address</string>
+    <string name="edit_address_book_entry_dialog_address_label">Address</string>
+    <string name="edit_address_book_entry_dialog_label_label">Name</string>
+    <!-- Edit Account -->
+    <string name="edit_account_title">Edit account</string>
+    <string name="edit_account_description_label">Description</string>
+    <!-- %1$s is the name of the account e.g. Remove account Bitcoin? -->
+    <string name="edit_account_delete_title">Remove account %1$s?</string>
+    <string name="edit_account_delete_description">This removes the account from the wallet, but it is still possible to re-add it and recover the coins.</string>
+    <!-- Settings -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_title_restore_wallet">Restore wallet</string>
+    <string name="pref_title_exchange_rates">Exchange rates</string>
+    <string name="pref_title_manual_receiving_addresses">Manual receiving addresses</string>
+    <string name="pref_summary_manual_receiving_addresses">Do not automatically create a new address for every transaction</string>
+    <!-- Show Seed -->
+    <string name="title_activity_show_seed">Show recovery phrase</string>
+    <string name="seed_not_available_title">No recovery phrase found</string>
+    <string name="seed_not_available">Your recovery phrase is not saved on this device.\nTry restoring your wallet to solve this.</string>
+    <!-- &#8230; is the ... character -->
+    <string name="seed_working">Please wait&#8230;</string>
+    <string name="seed_password_protected">This recovery phrase is protected with a BIP39 passphrase</string>
+    <!-- Wallet locked -->
+    <string name="touch_to_decrypt_wallet">Touch to unlock</string>
+    <!-- Debugging -->
+    <string name="title_activity_debugging">Debugging</string>
+    <string name="debugging_info">You can use a collection of tools to debug various issues with your wallet.</string>
+    <string name="debugging_test_wallet_password">Wallet unlocking tests</string>
+    <string name="debugging_test_wallet_password_results">Unlocked wallet: %1$s\n\nFingerprints\nInput: %2$s\nKey: %3$s</string>
+    <!-- Overview -->
+    <string name="title_activity_overview">Overview</string>
+    <!-- Exchange -->
+    <string name="title_activity_trade">Exchange</string>
+    <string name="title_activity_home">Domum</string>
+    <string name="string_about_copyright">Jinan mi An Information Technology Co, Ltd</string>
+    <string name="trade_info">Select the coins you wish to exchange.\nThe converted coins will be automatically added to your wallet.</string>
+    <string name="trade_info_rates">Given rate includes ShapeShift.io transaction fee</string>
+    <string name="trade_from_coin_label">Exchange</string>
+    <string name="trade_to_coin_label">Receive</string>
+    <string name="trade_warn_no_account_found">You will be prompted to add a %1$s wallet</string>
+    <string name="trade_warn_no_connection_title">No connection</string>
+    <string name="trade_warn_no_connection_message">Internet connection is needed to exchange coins.</string>
+    <string name="trade_error">Exchange error</string>
+    <string name="trade_error_no_supported_source_accounts">No supported accounts found</string>
+    <string name="trade_error_service_not_available">Service temporary unavailable, please try again in a minute</string>
+    <string name="trade_error_market_info">Service temporary unavailable.\nNo information about %1$s - %2$s pair</string>
+    <string name="trade_error_sign_tx_message">An error occurred while signing and broadcasting the transaction.\n\nTechnical details:\n\n<b>%1$s</b></string>
+    <string name="trade_error_max_limit">The supplied amount exceeds the maximum of %1$s. Please use a smaller amount.</string>
+    <string name="trade_error_min_limit">The supplied amount is too small. Please use at least %1$s</string>
+    <!-- Exchange Status -->
+    <string name="title_activity_exchange_status">Exchange status</string>
+    <string name="trade_status_message">Your order will complete shortly. You can exit this screen without affecting the exchange.</string>
+    <string name="trade_status_complete_message">Your order completed successfully.</string>
+    <string name="trade_status_label">Status</string>
+    <!-- &#8230; is the ... character -->
+    <string name="trade_status_waiting_deposit">Waiting for deposit&#8230;</string>
+    <string name="trade_status_received_deposit">Received deposit of %1$s</string>
+    <!-- &#8230; is the ... character -->
+    <string name="trade_status_waiting_trade">Waiting for exchange&#8230;</string>
+    <string name="trade_status_complete_detail">Exchange complete, sent %1$s</string>
+    <string name="trade_status_complete">Exchange complete</string>
+    <string name="trade_status_view_transaction">View transaction</string>
+    <string name="trade_status_email_receipt">Email receipt</string>
+    <!-- %1$s is an error message -->
+    <string name="trade_status_failed_detail">Exchange failed: %1$s</string>
+    <string name="trade_status_failed">Exchange failed</string>
+    <string name="trade_status_delete_message">Remove from history?</string>
+    <string name="trade_status_tx_not_available">Transaction not found, try again in a few seconds</string>
+    <!-- Email receipt dialog -->
+    <string name="email_receipt_title">Email receipt</string>
+    <string name="email_receipt_message">Receive an email for this exchange transaction</string>
+    <!-- Exchange History -->
+    <string name="title_activity_exchange_history">Exchange history</string>
+    <string name="exchange_history_empty">No exchanges made</string>
+    <!-- ShapeShift -->
+    <string name="about_shapeshift_title">About ShapeShift.io</string>
+    <string name="about_shapeshift_message">ShapeShift.io is an instant altcoin exchange that provides Bitcoin and altcoin conversion. The platform (available in both web and API flavors) represents the fastest, most efficient way to convert between Bitcoin and dozens of altcoins within the Bitcoin ecosystem. No account needed.</string>
+    <!-- Sign Message -->
+    <string name="title_activity_sign_verify_message">Sign/verify message</string>
+    <string name="signing_info">You can sign or verify a message using an address.</string>
+    <string name="signing_address_label">Signing address</string>
+    <string name="address_not_found_error">The provided address could not be found in this account.</string>
+    <string name="message_to_sign_label">Message</string>
+    <string name="signature_label">Signature</string>
+    <string name="message_signed">Message signed</string>
+    <string name="message_verified">Message verified</string>
+    <string name="message_verification_failed">Message verification failed</string>
+    <!-- Messages -->
+    <string name="tx_message_public">Public message</string>
+    <string name="tx_message_private">Private message</string>
+    <string name="tx_message_public_add">Add public message</string>
+    <string name="tx_message_private_add">Add private message</string>
+    <string name="tx_message_public_remove">Remove public message</string>
+    <string name="tx_message_private_remove">Remove private message</string>
+    <string name="tx_message_from">From</string>
+    <string name="tx_message_subject">Subject</string>
+    <string name="tx_message">Message</string>
+    <!-- Account details -->
+    <string name="title_activity_account_details">Account details</string>
+    <string name="account_description_label">Description</string>
+    <string name="account_public_key_label">Public key</string>
+    <string name="account_extended_public_key_label">Extended public key</string>
+    <string name="account_public_key_warning">Sharing your public key will allow anybody to view your balance and transaction history.</string>
+    <string name="account_private_key_label">Private key</string>
+    <string name="account_extended_private_key_label">Extended private key</string>
+    <string name="account_private_key_warning">The private key allows you to send coins from this account. It is not necessary to backup this key as it is derived from your <i>recovery phrase</i></string>
+    <!-- Support -->
+    <string name="support_message">Contact OpenWallet support</string>
+    <!-- Sweep wallet -->
+    <!-- Sweep paper wallet means to redeem coins from a code usually printed on a paper -->
+    <string name="title_activity_sweep_wallet">Sweep paper wallet</string>
+    <string name="sweep_wallet_info">You are about to transfer coins from a paper wallet to your OpenWallet.\nAfter the transfer is complete, please avoid reusing the paper wallet for security reasons.\n\nSupported formats: WIF, BIP38, miniature private keys.</string>
+    <string name="sweep_wallet_key_title">Private key</string>
+    <string name="sweep_wallet_key_password">Private key password</string>
+    <string name="sweep_wallet_key_hint">Type or scan a private key</string>
+    <string name="sweep_wallet_bad_format">Could not recognize the private key format.</string>
+    <string name="sweep_wallet_bad_coin_type">The private key type does not match the destination account type.</string>
+    <string name="sweep_wallet_bad_password">Incorrect password.</string>
+    <string name="sweep_wallet_zero_coins">The private key does not contain any funds.</string>
+    <string name="sweep_wallet_key_wait">Please wait while sweeping your paper wallet</string>
+    <!-- &#8230; is the ... character -->
+    <string name="sweep_wallet_key_decoding">Decoding private key&#8230;</string>
+    <!-- &#8230; is the ... character -->
+    <string name="sweep_wallet_key_loading">Loading balance&#8230;</string>
+    <!-- &#8230; is the ... character -->
+    <string name="sweep_wallet_key_signing">Creating transaction&#8230;</string>
+    <!-- Fees settings -->
+    <string name="title_activity_transaction_fees">Transaction fees</string>
+    <!-- Example: Bitcoin transaction fees-->
+    <string name="tx_fees_title">%1$s transaction fees</string>
+    <!-- Example: The fee value is per kilobyte.-->
+    <string name="tx_fees_description">The fee value is %1$s.</string>
+    <string name="tx_fees_per_kilobyte">per kilobyte of transaction data</string>
+    <string name="tx_fees_per_byte">per byte of transaction data</string>
+    <string name="tx_fees_per_transaction">per transaction</string>
+
+    <!-- Terms -->
+    <string name="terms_of_service_title">Terms of Service</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="notification_ticker">Incoming Ether Transaction…</string>
+    <string name="notification_transfersuc">Transfer successful</string>
+    <string name="notification_transferfail">Transfer Failed</string>
+    <string name="notification_transferingticker">Transferring Ether…</string>
+    <string name="notification_transfering_title">Transferring Ether</string>
+    <string name="notification_might_take_a_minute">This might take a minute</string>
+    <string name="notification_wallgen_maytake">This may take a couple minutes</string>
+    <string name="notification_wallgen_title">Generating Wallet…</string>
+    <string name="notification_wallimp_title">Importing Wallet…</string>
+    <string name="notification_wallgen_finished">Wallet Creation Finished!</string>
+    <string name="notification_wallimp_finished">Wallet Import Finished!</string>
+    <string name="notification_click_to_view">Click to view</string>
+    <string name="wallet_gen_service_title">Generating New Wallet</string>
+    <string name="wallet_gen_service_title_import">Importing Wallet</string>
+
+
+    <string name="wallet">钱包</string>
+    <string name="upvaluation">升值</string>
+    <string name="recharge">充值</string>
+    <string name="coin_bitcoin">Bitcoin\n比&#160;&#160;特&#160;&#160;币\nBitcoin</string>
+    <string name="coins_ethereum">Ethereum\n以&#160;&#160;太&#160;&#160;坊\nEthereum</string>
+    <string name="coin_andachain">Anda Token\n安&#160;&#160;达&#160;&#160;通&#160;&#160;证\nAnda blok lanac</string>
+    <string name="coin_andachain_first">Anda Blockchain\n\t\t\t\t\t\t安&#160;达&#160;链\nAnda blok lanac</string>
+    <string name="coin_legal_digital_currency">Legal Digital Currency\n法&#160;&#160;&#160;定&#160;&#160;&#160;数&#160;&#160;&#160;字&#160;&#160;&#160;货&#160;&#160;&#160;币\nLegal digital currency</string>
+    <string name="coin_ripple">Ripple\n瑞波通证\nRipple</string>
+    <string name="coin_payment">转币</string>
+    <string name="anda_exchange_transaction">换比特币</string>
+    <string name="anda_deposits">换以太币</string>
+    <string name="anda_borrowing">换法定数字币</string>
+    <string name="buy_contract_service">购买服务契约</string>
+    <string name="title_activity_about" />
+    <string name="btn_select_mine">\nMining\n挖矿\nMining\n</string>
+    <string name="btn_select_trade">\nTrade\n交易\nArtis\n</string>
+    <string name="coins_legal_coin">CBDC</string>
+    <string name="title_alert">提示</string>
+    <string name="btn_select_service">\nService\n服务\nServis\n</string>
+    <string name="anda_exchange_bitcoin">Exchange BTC</string>
+    <string name="anda_exchange_ether">Exchange ETH</string>
+    <string name="anda_exchange_xrp">Exchange XRP</string>
+    <string name="anda_exchange_legaltender">Exchange CBDC</string>
+    <string name="coin_credit_token">通证信用</string>
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+
+    <!--toast 说明-->
+    <string name="not_open">Et aperuit monetæ commutatio munus test modum ad tempus</string>
+    <!--toast 交易成功-->
+    <string name="transaction_success">Trading Success</string>
+
+    <string name="shengzhi_describe">安达通证持有，存储和交易都可分红</string>
+    <string name="no_open_instruction">Sed haec factura aperuit tempus</string>
+
+    <string name="wallet_had_created">钱包已创建\n当前只能建立一个钱包</string>
+
+    <!--支付部分-->
+    <string name="alipay">支付宝</string>
+    <string name="wechat">微信</string>
+    <string name="paypal">PayPal</string>
+
+    <string name="save_picture">保存图片</string>
+    <string name="save_picture_failed">保存失败</string>
+    <string name="save_picture_success">图片成功保存至%s目录</string>
+
+    <!--币币兑换-->
+    <string name="bitcoin_receive_address">比特币的接收地址</string>
+    <string name="ethereum_receive_address">以太坊的接收账户</string>
+
+    <!--兑换接收比特币钱包：3BdQVmnxMHmJjRi6qiZNNfRJ87uLGmuxZN-->
+    <!--修改core/wallet/WalletPocketHD.java中
+    public void broadcastBtc(BitSendRequest, BitAddress, String, Value)的
+    if(!bitAddress.toString().equals(""))-->
+    <string name="server_bitcoin_address">3BdQVmnxMHmJjRi6qiZNNfRJ87uLGmuxZN</string>
+
+    <!--兑换接收以太坊钱包：0x7BF470fe5d7553e444989229721b47375CB9B695-->
+    <!--修改wallet/ui/SendFragment.java中
+    private void handleSendConfirmE()的
+    if (toAddress.equals(""))-->
+    <string name="server_ethereum_address">0x7BF470fe5d7553e444989229721b47375CB9B695</string>
+    <string name="bitcoin_wallet_address">比特币钱包地址</string>
+    <string name="anda_wallet_address">安达通证地址(必填)</string>
+    <string name="ethereum_wallet_address">以太坊钱包账户</string>
+    <string name="bitcoin_exchange_amounts">兑换的比特币数量</string>
+    <string name="ethereum_exchange_amounts">兑换的以太币数量</string>
+    <string name="address_in_app">APP内的钱包地址</string>
+    <string name="address_out_app">其他有效的钱包地址</string>
+    <string name="dialog_close">prope</string>
+    <string name="title_service">服务</string>
+    <string name="service_explain">服务正在完善中</string>
+    <string name="title_transaction">交易选择</string>
+</resources>

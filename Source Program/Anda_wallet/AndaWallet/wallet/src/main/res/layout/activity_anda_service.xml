@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.onets.wallet.ui.AndaServiceActivity">
+
+    <ListView
+        android:id="@+id/list_anda_services"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+    <!--<Button-->
+        <!--android:id="@+id/btn_ai_service"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="AI"-->
+        <!--android:background="#f0f0f0"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#2d2c2c"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:background="#f0f0f0"-->
+        <!--android:id="@+id/btn_bigmsg_service"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="大数据"/>-->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#2d2c2c"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:background="#f0f0f0"-->
+        <!--android:id="@+id/btn_intellectual_property_service"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="知识产权"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#2d2c2c"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:background="#f0f0f0"-->
+        <!--android:id="@+id/btn_financial_service"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="金融服务"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#2d2c2c"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:background="#f0f0f0"-->
+        <!--android:id="@+id/btn_art_service"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="艺术作品"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#2d2c2c"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:background="#f0f0f0"-->
+        <!--android:id="@+id/btn_video_service"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="影视作品"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#2d2c2c"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:background="#f0f0f0"-->
+        <!--android:id="@+id/btn_supply_chain_service"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="供应链回溯"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#2d2c2c"-->
+        <!--/>-->
+    <!--<Button-->
+        <!--android:background="#f0f0f0"-->
+        <!--android:id="@+id/btn_game_service"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="游戏"/>-->
+
+</LinearLayout>
