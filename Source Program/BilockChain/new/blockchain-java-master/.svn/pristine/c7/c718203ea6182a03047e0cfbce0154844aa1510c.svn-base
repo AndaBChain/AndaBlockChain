@@ -1,0 +1,289 @@
+package com.aizone.blockchain.dao;
+
+import com.aizone.blockchain.model.PaypalPaymentInfo;
+import com.aizone.blockchain.utils.Db;
+import com.aizone.blockchain.web.controller.PaypalController;
+import java.io.PrintStream;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+
+
+
+
+
+
+
+
+
+@Component
+public class PaymentRecordDao
+{
+  @Autowired
+  PaypalController pc;
+  private static final String SFWC_FALSE = "N";
+  private static final String SFWC_TRUE = "Y";
+  
+  public boolean addPaymentRecord(PaypalPaymentInfo payInfo)
+  {
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "insert into paypal_payment_record(payment_date,payment_status,payment_amount,payment_currency,txn_id,receiver_email,payer_email,is_exchanged,anda_address) values (?,?,?,?,?,?,?,?,?)";
+    try {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, payInfo.getPaymentDate());
+      psq.setString(2, payInfo.getPaymentStatus());
+      psq.setString(3, payInfo.getPaymentAmount());
+      psq.setString(4, payInfo.getPaymentCurrency());
+      psq.setString(5, payInfo.getTxnId());
+      psq.setString(6, payInfo.getReceiverEmail());
+      psq.setString(7, payInfo.getPayerEmail());
+      psq.setString(8, payInfo.getIsExchanged());
+      psq.setString(9, payInfo.getAndaAddress());
+      Integer i = Integer.valueOf(psq.executeUpdate());
+      System.out.println("20181115--------" + i);
+      boolean bool; if (i.intValue() == 1) {
+        logSaveJl(payInfo.getTxnId() + "", "Y", "SUCCESS", "log_paypal");
+        return true;
+      }
+      
+      logSaveJl(payInfo.getTxnId() + "", "N", "FAIL", "log_paypal");
+      return false;
+    }
+    catch (SQLException e)
+    {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+    return false;
+  }
+  
+
+
+
+
+  public boolean CheckTxnId(String txnId)
+  {
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "select * from paypal_payment_record where txn_id = ?";
+    try {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, txnId);
+      ResultSet rs = psq.executeQuery();
+      System.out.println("20181115--------" + rs);
+      boolean bool; if (!rs.next()) {
+        return true;
+      }
+      return false;
+    }
+    catch (SQLException e)
+    {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+    return false;
+  }
+  
+
+
+
+
+  public PaypalPaymentInfo SelectPaymentResult(String txnId)
+  {
+    PaypalPaymentInfo payInfo = new PaypalPaymentInfo();
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "select payment_date,payment_status,payment_amount,payment_currency,txn_id,receiver_email,payer_email,is_exchanged,anda_address from paypal_payment_record where txn_id = ?";
+    try {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, txnId);
+      ResultSet rs = psq.executeQuery();
+      System.out.println(System.currentTimeMillis() + "" + rs);
+      if (rs.next()) {
+        payInfo.setPaymentDate(rs.getString("payment_date"));
+        payInfo.setPaymentStatus(rs.getString("payment_status"));
+        payInfo.setPaymentAmount(rs.getString("payment_amount"));
+        payInfo.setPaymentCurrency(rs.getString("payment_currency"));
+        payInfo.setTxnId(rs.getString("txn_id"));
+        payInfo.setReceiverEmail(rs.getString("receiver_email"));
+        payInfo.setPayerEmail(rs.getString("payer_email"));
+        payInfo.setIsExchanged(rs.getString("is_exchanged"));
+        payInfo.setAndaAddress(rs.getString("anda_address"));
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+    return payInfo;
+  }
+  
+
+
+
+
+  public String SelectPaymentAmount(String txnId)
+  {
+    String payment_amount = null;
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "select payment_amount from paypal_payment_record where txn_id = ?";
+    try {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, txnId);
+      ResultSet rs = psq.executeQuery();
+      System.out.println(System.currentTimeMillis() + "" + rs);
+      if (rs.next()) {
+        payment_amount = rs.getString("payment_amount");
+      } else {
+        payment_amount = "FAIL";
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+    return payment_amount;
+  }
+  
+
+
+
+
+  public void UpdatePaypalPaymentRecord(String txnId, String andaAddress)
+  {
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "update paypal_payment_record set is_exchanged = ?,anda_address = ? where txn_id = ?";
+    try {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, "true");
+      psq.setString(2, andaAddress);
+      psq.setString(3, txnId);
+      int affectRows = psq.executeUpdate();
+      System.out.println(System.currentTimeMillis() + ":" + affectRows);
+      if (affectRows >= 1) {
+        System.out.println("更新完成");
+      }
+      else {
+        System.out.println("更新失败");
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+  public void logSaveJl(String id, String result, String reason, String table)
+  {
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "insert into " + table + "(id,result,reason,time) values (?,?,?,?)";
+    try
+    {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, id);
+      psq.setString(2, result);
+      psq.setString(3, reason);
+      psq.setDate(4, new Date(System.currentTimeMillis()));
+      psq.executeUpdate();
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+  }
+  
+  public void logSaveTest(String id, String result, String table)
+  {
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "insert into " + table + "(id,result) values (?,?)";
+    try
+    {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, id);
+      psq.setString(2, result);
+      psq.executeUpdate();
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+  }
+  
+
+
+
+
+
+  public void logSaveTest(String id, String result)
+  {
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "insert into paypal_pay_log_test(id,result,time) values (?,?,?)";
+    try {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, id);
+      psq.setString(2, result);
+      SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+      String time = dateformat.format(Long.valueOf(System.currentTimeMillis()));
+      psq.setString(3, time);
+      psq.executeUpdate();
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+  }
+  
+
+
+
+
+
+  public void logSaveTest2(String id, String result, String time)
+  {
+    Connection conn = null;
+    conn = Db.getConnection();
+    String sql = "insert into paypal_pay_log_test(id,result,time) values (?,?,?)";
+    try {
+      PreparedStatement psq = conn.prepareStatement(sql);
+      psq.setString(1, id);
+      psq.setString(2, result);
+      psq.setString(3, time);
+      psq.executeUpdate();
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      Db.closeConnection(conn);
+    }
+  }
+}
+

@@ -1,0 +1,6 @@
+package com.aizone.blockchain.constants;
+
+public class TransactionConstants {
+	public static final String USD_EXCHANGE_RATE = "0.89";
+	public static final String CNY_EXCHANGE_RATE = "6";
+}
